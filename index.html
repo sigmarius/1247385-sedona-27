@@ -7,9 +7,10 @@
   <body>
     <header>
       <nav>
-        <a href="#">
+        <!-- мы уже на главной, и получается, что ссылка-обертка для логотипа ссылается на саму себя, а это неправильно. Может быть тогда предусмотреть вместо ссылки <div> в качестве обертки для дополнительной стилизации?.. или же вообще просто оставить изображение?..-->
+        <div>
           <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип проекта Седона">
-        </a>
+        </div>
         <ul>
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
@@ -31,7 +32,7 @@
 
       <section>
         <!--заголовок, которого нет в макете, поэтому в стилях мы его скроем -->
-        <h2>Почему стоит посетить Седону?</h2>
+        <h2 class="visually-hidden">Почему стоит посетить Седону?</h2>
         <ul>
           <li>
             <h3>Настоящий городок</h3>
@@ -73,7 +74,7 @@
           <li>
             <h3>Мало туристов</h3>
             <span>— №5 —</span>
-            <p>Большинство едет в гранд каньон и толпится там</p>
+            <p>Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
       </section>
@@ -84,12 +85,34 @@
       </section>
 
       <section>
-          <h2>Поиск гостиницы в седоне</h2>
-          <!-- Здесь будет форма -->
+          <h2>Поиск гостиницы в Седоне</h2>
+          <form action="https://echo.htmlacademy.ru" metod="post">
+            <p>
+              <label for="arrival-date">Дата заезда:</label>
+              <input id="arrival-date" type="date" name="arrival-date" value="2017-04-24">
+            </p>
+            <p>
+              <label for="living-date">Дата выезда:</label>
+              <input id="living-date" type="date" name="living-date" value="2017-07-04">
+            </p>
+            <p>
+              <label for="adults-amount">Взрослые:</label>
+              <button type="button" name="adults-count-down" aria-label="Уменьшить число взрослых">-</button>
+              <input id="adults-amount" type="number" name="adults-amount" value="2">
+              <button type="button" name="adults-count-up" aria-label="Увеличить число взрослых">+</button>
+            </p>
+            <p>
+              <label for="kids-amount">Дети:</label>
+              <button type="button" name="kids-count-down" aria-label="Уменьшить число детей">-</button>
+              <input id="kids-amount" type="number" name="kids-amount" value="0">
+              <button type="button" name="kids-count-up" aria-label="Увеличить число детей">+</button>
+            </p>
+            <button type="submit">Найти</button>
+          </form>
       </section>
 
       <section>
-        <h2>Интерактивная карта проезда</h2>
+        <h2 class="visually-hidden">Интерактивная карта проезда</h2>
         <!-- Здесь будет карта на JS, а пока мы его не изучили - <img> -->
         <img src="img/map.jpg" width="1200" height="594" alt="Схема проезда">
       </section>
@@ -102,11 +125,11 @@
       </div>
       <ul>
           <!-- тут будет фоновая картиночка "img/twitter.svg" width="17" height="15"-->
-          <li><a href="#">Твитер</a></li>
+          <li><a href="#" aria-label="Твитер"></a></li>
           <!-- тут будет фоновая картиночка "img/fb-icon.svg" width="12" height="22"-->
-          <li><a href="#">Фейсбук</a></li>
+          <li><a href="#" aria-label="Фейсбук"></a></li>
           <!-- тут будет фоновая картиночка "img/fb-icon.svg" width="20" height="16"-->
-          <li><a href="#">YouTube</a></li>
+          <li><a href="#" aria-label="YouTube"></a></li>
       </ul>
       <div>
         <span>Website by</span>
