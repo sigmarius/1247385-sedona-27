@@ -21,15 +21,60 @@
     </header>
 
     <main>
-      <h1>Каталог отелей Седоны</h1>
+      <h1 class="visually-hidden">Каталог отелей Седоны</h1>
       <section>
       <!--тут будет фоновое изображение "img/filter-background.jpg" width="1200" height="800"-->
-       <h2>Фильтр отелей</h2>
-       <!-- Здесь будет форма со стилизованными переключателями
+       <h2 class="visually-hidden">Фильтр отелей</h2>
+       <!-- картинки переключателей для стилизации в CSS:
         чекбокс выбран "img/checkbox-on.svg" width="27" height="23"
         чекбокс не выбран "img/checkbox-off.svg" width="23" height="23"
         ползунок на фильтре "img/filter-button.svg" width="20" height="22"
         -->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <!--method="get" чтобы была возможность отправить результаты фильтрации для просмотра-->
+          <fieldset>
+            <legend>Инфраструктура</legend>
+            <ul>
+              <li>
+                <input id="swimming-pool" type="checkbox" name="swimming-pool" checked>
+                <label for="swimming-pool">Бассейн</label>
+              </li>
+              <li>
+                <input id="parking" type="checkbox" name="parking">
+                <label for="parking">Парковка</label>
+              </li>
+              <li>
+                <input id="wi-fi" type="checkbox" name="wi-fi">
+                <label for="wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья</legend>
+            <ul>
+              <li>
+                <input id="hotel" type="checkbox" name="hotel" checked>
+                <label for="hotel">Гостиница</label>
+              </li>
+              <li>
+                <input id="motel" type="checkbox" name="motel" checked>
+                <label for="motel">Мотель</label>
+              </li>
+              <li>
+                <input id="appartment" type="checkbox" name="appartment"checked>
+                <label for="appartment">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <p>Стоимость в сутки(р):<br>
+            <!-- самый сложныы раздел в форме... возможна ли такая его реализация?... -->
+            <label for="min-range">от 0</label>
+            <label for="max-range">до 3000</label><br>
+            <input id="min-range" type="range" name="min-range" min="0" max="1500" value="0">
+            <input id="max-range" type="range" name="max-range" min="1500" max="3000" value="2700">
+          </p>
+          <button type="submit">Показать</button>
+        </form>
        <!-- раздел с результатами фильтрации -->
          <p>Найдено:
            <span>3</span>
@@ -37,11 +82,17 @@
            <a href="#">По цене</a>
            <a href="#">По типу</a>
            <a href="#">По рейтингу</a>
-           <!-- специальные ссылки для стрелочек вверх-вниз с фоновыми картинками
-                стрелка вверх "img/icon-up.svg" width="11" height="10" -->
-           <a href="#"></a>
-           <!-- стрелка вниз "img/icon-down.svg" width="11" height="10" -->
-           <a href="#"></a>
+           <!-- так как по стайлгайду стрелочки для сортировки имеют 3 состояния, может быть их тоже встроить?... -->
+           <a href="#" aria-label="По возрастанию">
+             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+               <path fill="#cacaca" d="M5.5 0L0 10h11z"/>
+             </svg>
+           </a>
+           <a href="#" aria-label="По убыванию">
+             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+               <path fill="#81b3d2" d="M5.5 10L0 0h11"/>
+             </svg>
+           </a>
          </p>
      </section>
 
