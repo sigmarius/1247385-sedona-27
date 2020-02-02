@@ -66,13 +66,21 @@
               </li>
             </ul>
           </fieldset>
-          <p>Стоимость в сутки(р):<br>
-            <!-- самый сложныы раздел в форме... возможна ли такая его реализация?... -->
-            <label for="min-range">от 0</label>
-            <label for="max-range">до 3000</label><br>
-            <input id="min-range" type="range" name="min-range" min="0" max="1500" value="0">
-            <input id="max-range" type="range" name="max-range" min="1500" max="3000" value="2700">
-          </p>
+          <div>
+            <p>Стоимость в сутки(р):</p>
+              <span>от 0</span>
+              <span>до 3000</span>
+            <div>
+              <!--обёртка, div для элементов - полоска <span> по которой движутся круглые контролы <button> -->
+              <span></span>
+              <button type="button" aria-label="Увеличить"></button>
+              <button type="button" aria-label="Уменьшить"></button>
+            </div>
+              <label for="min-price">Минимальная стоимость</label>
+              <label for="max-price">Максимальная стоимость</label><br>
+              <input id="min-price" type="number" name="min-price" min="0" max="3000">
+              <input id="max-price" type="number" name="max-price" min="0" max="3000">
+            </div>
           <button type="submit">Показать</button>
         </form>
        <!-- раздел с результатами фильтрации -->
@@ -82,7 +90,6 @@
            <a href="#">По цене</a>
            <a href="#">По типу</a>
            <a href="#">По рейтингу</a>
-           <!-- так как по стайлгайду стрелочки для сортировки имеют 3 состояния, может быть их тоже встроить?... -->
            <a href="#" aria-label="По возрастанию">
              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                <path fill="#cacaca" d="M5.5 0L0 10h11z"/>
