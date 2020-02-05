@@ -8,3 +8,37 @@ body {
   color: #333333;
   text-transform: uppercase;
 }
+
+img { max-width: 100% }
+a { text-decoration: none }
+
+.menu {
+  list-style: none;
+  font-weight: bold;
+  line-height: 26px;
+}
+.menu a {
+  color: #000000;
+}
+.menu a:hover,
+.menu a:focus {
+  color: #81b3d2;
+}
+.menu a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+section.intro  {
+  background-image: url("../img/intro-mask.svg"),
+                    url("../img/background-photo.jpg");
+  background-repeat: no-repeat;
+  background-size: 1200px 59px, cover;
+  background-position: center bottom, center center;
+  height: 800px;
+}
+.intro div {
+  background-color: #ffffff;
+}
+.intro img {
+  margin-top:
+}
