@@ -10,8 +10,13 @@ body {
   width: 1200px;
 }
 
-img { max-width: 100% }
-a { text-decoration: none }
+img { 
+  max-width: 100%; 
+}
+
+a { 
+  text-decoration: none; 
+}
 
 .visually-hidden {
   position: absolute;
@@ -31,62 +36,88 @@ a { text-decoration: none }
   font-weight: bold;
   line-height: 26px;
 }
+
 .menu a {
   color: #000000;
 }
+
 .menu a:hover,
 .menu a:focus {
   color: #81b3d2;
 }
+
 .menu a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-section.intro  {
-  background-image: url("../img/background-photo.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center bottom;
+.intro  {
+  background-image: url("../img/intro-mask.svg"),
+                    url("../img/background-photo.jpg");
+  background-repeat: no-repeat, 
+                     no-repeat;
+  background-size: 1203px 59px,
+                   contain;
+  background-position: center bottom,
+                       center bottom;
   text-align: center;
 }
-.intro div {
-  background-color: #ffffff;
+
+.intro img {
+  margin-bottom: 79px;
 }
-.intro h1 {
+
+.intro-header {
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
   color: #000000;
 }
-.intro p {
-  font-size: 14px;
+
+.intro-text {
   line-height: 26px;
   color: #333333;
 }
+
 .promo {
   text-align: center;
 }
-.promo h2 {
+
+.promo-header {
   font-size: 30px;
   line-height: 36px;
   color: #000000;
 }
+
 .promo p {
   font-size: 14px;
   line-height: 24px;
   color: #333333;
 }
+
+/*Форма поиска отелей на Главной*/
 .search {
   width: 568px;
   font-size: 14px;
   font-weight: bold;
   color: #000000;
 }
+
 .search h3 {
   background-color: #766357;
   color: #ffffff;
   line-height: 26px;
 }
+
+.search h3:hover,
+.search h3:focus {
+  background-color: #604e43;
+}
+
+.search h3:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .search input {
   font: inherit;
   text-transform: uppercase;
@@ -94,6 +125,30 @@ section.intro  {
   border: none;
   color: #000000;
 }
+
+.search input:hover {
+  background-color: #ebebeb;
+}
+
+.search input:focus {
+  background-color: #ffffff;
+  border: solid 2px #e5e5e5;
+}
+
+.search button[type="button"] {
+  color: #cacaca;
+  font-weight: bold;;
+}
+
+.search button[type="button"]:hover,
+.search button[type="button"]:focus {
+  color: #000000;
+}
+
+.search button[type="button"]:active {
+  color: #81b3d2;
+}
+
 .search button[type="submit"] {
   font: inherit;
   text-transform: uppercase;
@@ -101,57 +156,118 @@ section.intro  {
   color: #ffffff;
   border: none;
 }
+
+.search button[type="submit"]:hover,
+.search button[type="submit"]:focus {
+  background-color: #669ec0;
+}
+
+.search button[type="submit"]:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/*Футер*/
 .contact {
   color: #000000;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
 }
+
 .contact a {
   color: #000000;
 }
-.social li {
+
+.social-item{
   list-style: none;
   width: 46px;
   height: 48px;  
   text-align: center;
   background-color: #81b3d2;
 }
+
 .copyright {
   color: #000000;
   line-height: 26px;
 }
-.catalog li {
+
+.copyright:hover path,
+.copyright:focus path {
+  fill: #81b3d2;
+}
+
+.copyright:active path {
+  fill: #bdbbbc;
+}
+/*Страница Каталога*/
+.menu .active {
+  color: #766357;
+}
+
+.catalog-item {
   list-style: none;
 }
-.catalog h3 a {
+
+.catalog-item-header a {
   color: #000000;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
 }
+
+.catalog-item-header a:hover,
+.catalog-item-header a:focus {
+  color: #81b3d2;
+}
+
+.catalog-item-header a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .catalog p {
-  font-size: 14px;
-  line-height: 21px;
   color: #333333;
 }
-.catalog p a {
-  font-size: 14px;
+
+.catalog-item-buttons a {
   font-weight: bold;
-  line-height: 21px;
   color: #ffffff;
-  background-color: #766357;
 }
-.catalog p a:first-child {
+
+.catalog-item-buttons .button-info {
   background-color: #81b3d2;
 }
-.catalog div span:last-child {
-  font-size: 14px;
-  line-height: 21px;
+
+.catalog-item-buttons .button-info:hover,
+.catalog-item-buttons .button-info:focus {
+  background-color: #669ec0;
+}
+
+.catalog-item-buttons .button-info:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.catalog-item-buttons .button-book {
+  background-color: #766357;
+}
+
+.catalog-item-buttons .button-book:hover,
+.catalog-item-buttons .button-book:focus {
+  background-color: #604e43;
+}
+
+.catalog-item-buttons .button-book:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.catalog-item-rating span:last-child {
   color: #666666;
   background-color: #f2f2f2;
 }
-.catalog div span:first-child {
+
+.catalog-item-rating span:first-child {
   background-image: url("../img/star.svg");
   background-size: 18px 17px;
   height: 17px;
