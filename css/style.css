@@ -50,19 +50,21 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.intro  {
+.intro-image {
+  width: 1200px;
   background-image: url("../img/intro-mask.svg"),
                     url("../img/background-photo.jpg");
   background-repeat: no-repeat, 
                      no-repeat;
   background-size: 1203px 59px,
-                   contain;
-  background-position: center bottom,
+                   cover;
+  background-position: center 101%,
                        center bottom;
   text-align: center;
 }
 
 .intro img {
+  margin-top: 76px;
   margin-bottom: 79px;
 }
 
@@ -71,11 +73,13 @@ a {
   font-weight: bold;
   line-height: 21px;
   color: #000000;
+  text-align: center;
 }
 
 .intro-text {
   line-height: 26px;
   color: #333333;
+  text-align: center;
 }
 
 .promo {
@@ -88,7 +92,7 @@ a {
   color: #000000;
 }
 
-.promo p {
+.promo-text {
   font-size: 14px;
   line-height: 24px;
   color: #333333;
@@ -102,23 +106,27 @@ a {
   color: #000000;
 }
 
-.search h3 {
+.search-header {
   background-color: #766357;
   color: #ffffff;
   line-height: 26px;
+  text-transform: uppercase;
+  font-size: 21px;
+  border: none;
 }
 
-.search h3:hover,
-.search h3:focus {
+.search-header:hover,
+.search-header:focus {
   background-color: #604e43;
+  color: #ffffff;
 }
 
-.search h3:active {
+.search-header:active {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
 }
 
-.search input {
+.search-input {
   font: inherit;
   text-transform: uppercase;
   background-color: #f2f2f2;
@@ -126,30 +134,30 @@ a {
   color: #000000;
 }
 
-.search input:hover {
+.search-input:hover {
   background-color: #ebebeb;
 }
 
-.search input:focus {
+.search-input:focus {
   background-color: #ffffff;
   border: solid 2px #e5e5e5;
 }
 
-.search button[type="button"] {
+.search-button {
   color: #cacaca;
-  font-weight: bold;;
+  font-weight: bold;
 }
 
-.search button[type="button"]:hover,
-.search button[type="button"]:focus {
+.search-button:hover,
+.search-button:focus {
   color: #000000;
 }
 
-.search button[type="button"]:active {
+.search-button:active {
   color: #81b3d2;
 }
 
-.search button[type="submit"] {
+.search-button-submit {
   font: inherit;
   text-transform: uppercase;
   background-color: #81b3d2;
@@ -157,12 +165,12 @@ a {
   border: none;
 }
 
-.search button[type="submit"]:hover,
-.search button[type="submit"]:focus {
+.search-button-submit:hover,
+.search-button-submit:focus {
   background-color: #669ec0;
 }
 
-.search button[type="submit"]:active {
+.search-button-submit:active {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -179,7 +187,7 @@ a {
   color: #000000;
 }
 
-.social-item{
+.social-item {
   list-style: none;
   width: 46px;
   height: 48px;  
@@ -192,14 +200,15 @@ a {
   line-height: 26px;
 }
 
-.copyright:hover path,
-.copyright:focus path {
+.copyright-icon:hover path,
+.copyright-icon:focus path {
   fill: #81b3d2;
 }
 
 .copyright:active path {
   fill: #bdbbbc;
 }
+
 /*Страница Каталога*/
 .menu .active {
   color: #766357;
@@ -209,19 +218,19 @@ a {
   list-style: none;
 }
 
-.catalog-item-header a {
+.catalog-item-header {
   color: #000000;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
 }
 
-.catalog-item-header a:hover,
-.catalog-item-header a:focus {
+.catalog-item-header:hover,
+.catalog-item-header:focus {
   color: #81b3d2;
 }
 
-.catalog-item-header a:active {
+.catalog-item-header:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -229,35 +238,35 @@ a {
   color: #333333;
 }
 
-.catalog-item-buttons a {
+.catalog-controls a {
   font-weight: bold;
   color: #ffffff;
 }
 
-.catalog-item-buttons .button-info {
+.button-info {
   background-color: #81b3d2;
 }
 
-.catalog-item-buttons .button-info:hover,
-.catalog-item-buttons .button-info:focus {
+.button-info:hover,
+.button-info:focus {
   background-color: #669ec0;
 }
 
-.catalog-item-buttons .button-info:active {
+.button-info:active {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3)
 }
 
-.catalog-item-buttons .button-book {
+.button-book {
   background-color: #766357;
 }
 
-.catalog-item-buttons .button-book:hover,
-.catalog-item-buttons .button-book:focus {
+.button-book:hover,
+.button-book:focus {
   background-color: #604e43;
 }
 
-.catalog-item-buttons .button-book:active {
+.button-book:active {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3)
 }
