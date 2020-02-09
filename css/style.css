@@ -195,17 +195,34 @@ a {
   background-color: #81b3d2;
 }
 
+.social-icon {
+  fill: #ffffff;
+}
+
+.social-item:hover,
+.social-item:focus {
+  background-color: #669ec0;
+}
+
+.social-item:active {
+  background-color: #5496bd;
+}
+
+.social-item:active .social-icon {
+  opacity: 0.3;
+}
+
 .copyright {
   color: #000000;
   line-height: 26px;
 }
 
-.copyright-icon:hover path,
-.copyright-icon:focus path {
+.copyright-icon:hover,
+.copyright-icon:focus {
   fill: #81b3d2;
 }
 
-.copyright:active path {
+.copyright-icon:active {
   fill: #bdbbbc;
 }
 
