@@ -1,13 +1,14 @@
 body {
+  width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", Arial, sans-serif;
+
+  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  font-weight: 400;
+  font-family: "PT Sans", Arial, sans-serif;
   color: #333333;
   text-transform: uppercase;
-  width: 1200px;
 }
 
 img { 
@@ -27,14 +28,14 @@ a {
 }
 
 .navigation {
-  background-color: #ffffff;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .menu {
-  list-style: none;
   font-weight: bold;
   line-height: 26px;
+  list-style: none;
 }
 
 .menu a {
@@ -52,6 +53,7 @@ a {
 
 .intro-image {
   width: 1200px;
+  text-align: center;
   background-image: url("../img/intro-mask.svg"),
                     url("../img/background-photo.jpg");
   background-repeat: no-repeat, 
@@ -60,7 +62,6 @@ a {
                    cover;
   background-position: center 101%,
                        center bottom;
-  text-align: center;
 }
 
 .intro img {
@@ -69,17 +70,17 @@ a {
 }
 
 .intro-header {
-  font-size: 21px;
   font-weight: bold;
+  font-size: 21px;
   line-height: 21px;
-  color: #000000;
   text-align: center;
+  color: #000000;
 }
 
 .intro-text {
   line-height: 26px;
-  color: #333333;
   text-align: center;
+  color: #333333;
 }
 
 /*Секция Преимуществ*/
@@ -88,14 +89,14 @@ a {
 }
 
 .features h3 {
-  font-size: 21px;
   font-weight: bold;
+  font-size: 21px;  
   color: #000000;
 }
 
 .features-blue {
-  background-color: #81b3d2;
   color: #ffffff;
+  background-color: #81b3d2;  
 }
 
 .features-blue h3 {
@@ -122,37 +123,37 @@ a {
 /*Форма поиска отелей на Главной*/
 .search {
   width: 568px;
-  font-size: 14px;
   font-weight: bold;
+  font-size: 14px;  
   color: #000000;
 }
 
 .search-header {
-  background-color: #766357;
-  color: #ffffff;
+  font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
-  font-size: 21px;
+  color: #ffffff;
+  background-color: #766357;
   border: none;
 }
 
 .search-header:hover,
 .search-header:focus {
-  background-color: #604e43;
   color: #ffffff;
+  background-color: #604e43;
 }
 
 .search-header:active {
-  background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;  
 }
 
 .search-input {
   font: inherit;
   text-transform: uppercase;
-  background-color: #f2f2f2;
-  border: none;
   color: #000000;
+  background-color: #f2f2f2;
+  border: none;  
 }
 
 .search-input::placeholder {
@@ -169,8 +170,8 @@ a {
 }
 
 .search-button {
-  color: #cacaca;
   font-weight: bold;
+  color: #cacaca;  
 }
 
 .search-button:hover,
@@ -185,8 +186,8 @@ a {
 .search-button-submit {
   font: inherit;
   text-transform: uppercase;
-  background-color: #81b3d2;
   color: #ffffff;
+  background-color: #81b3d2;  
   border: none;
 }
 
@@ -196,16 +197,16 @@ a {
 }
 
 .search-button-submit:active {
-  background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
 }
 
 /*Футер*/
 .contact {
-  color: #000000;
+  font-weight: bold;  
   font-size: 21px;
   line-height: 26px;
-  font-weight: bold;
+  color: #000000;
 }
 
 .contact a {
@@ -213,10 +214,10 @@ a {
 }
 
 .social-item {
-  list-style: none;
   width: 46px;
   height: 48px;  
   text-align: center;
+  list-style: none;
   background-color: #81b3d2;
 }
 
@@ -238,8 +239,8 @@ a {
 }
 
 .copyright {
-  color: #000000;
   line-height: 26px;
+  color: #000000;
 }
 
 .copyright-icon:hover,
@@ -273,15 +274,15 @@ a {
 
 /*Раздел с результатами фильтрации*/
 .catalog-filter-found {
-  font-size: 21px;
-  line-height: 26px;
   font-weight: bold;
+  font-size: 21px;
+  line-height: 26px; 
   background-color: #ffffff;
 }
 
-.catalog-filter-found span:last-of-type {
-  font-size: 12px;
+.filter-found-text {
   font-weight: normal;
+  font-size: 12px;  
   line-height: 18px;
   color: #000000;
 }
@@ -293,7 +294,7 @@ a {
   text-decoration: underline dotted #81b3d2;
 }
 
-.catalog-filter-sort:first-of-type {
+.catalog-filter-sort.active {
   color: #81b3d2;
   text-decoration: none;
 }
@@ -335,10 +336,10 @@ a {
 }
 
 .catalog-item-header {
-  color: #000000;
-  font-size: 21px;
-  line-height: 26px;
   font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;  
+  color: #000000;
 }
 
 .catalog-item-header:hover,
@@ -369,8 +370,8 @@ a {
 }
 
 .button-info:active {
-  background-color: #5496bd;
-  color: rgba(255, 255, 255, 0.3)
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;  
 }
 
 .button-book {
@@ -383,8 +384,8 @@ a {
 }
 
 .button-book:active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
-  color: rgba(255, 255, 255, 0.3)
 }
 
 .catalog-item-rating span:last-child {
@@ -393,7 +394,7 @@ a {
 }
 
 .catalog-item-rating span:first-child {
+  height: 17px;
   background-image: url("../img/star.svg");
   background-size: 18px 17px;
-  height: 17px;
 }

@@ -78,8 +78,8 @@
               <button type="button" aria-label="Увеличить"></button>
               <button type="button" aria-label="Уменьшить"></button>
             </div>
-              <label for="min-price">Минимальная стоимость</label>
-              <label for="max-price">Максимальная стоимость</label><br>
+              <label for="min-price" class="visually-hidden">Минимальная стоимость</label>
+              <label for="max-price" class="visually-hidden">Максимальная стоимость</label>
               <input id="min-price" type="number" name="min-price" min="0" max="3000">
               <input id="max-price" type="number" name="max-price" min="0" max="3000">
             </div>
@@ -88,8 +88,8 @@
        <!-- раздел с результатами фильтрации -->
          <p class="catalog-filter-found">Найдено:
            <span>3</span>
-           <span>Сортировка:</span>
-           <a href="#" class="catalog-filter-sort">По цене</a>
+           <span class="filter-found-text">Сортировка:</span>
+           <a href="#" class="catalog-filter-sort active">По цене</a>
            <a href="#" class="catalog-filter-sort">По типу</a>
            <a href="#" class="catalog-filter-sort">По рейтингу</a>
            <a href="#" aria-label="По возрастанию">
