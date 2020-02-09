@@ -82,6 +82,27 @@ a {
   text-align: center;
 }
 
+/*Секция Преимуществ*/
+.features ul {
+  list-style: none;
+}
+
+.features h3 {
+  font-size: 21px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.features-blue {
+  background-color: #81b3d2;
+  color: #ffffff;
+}
+
+.features-blue h3 {
+  color: #ffffff;
+}
+
+/*Секция с предложением*/
 .promo {
   text-align: center;
 }
@@ -131,6 +152,10 @@ a {
   text-transform: uppercase;
   background-color: #f2f2f2;
   border: none;
+  color: #000000;
+}
+
+.search-input::placeholder {
   color: #000000;
 }
 
@@ -231,6 +256,80 @@ a {
   color: #766357;
 }
 
+/*Верхняя секция Фильтров Каталога*/
+.catalog-filter {
+  background-image: url('../img/filter-background.jpg');
+  background-repeat: no-repeat;
+}
+
+.catalog-search-form {
+  color: #ffffff;
+}
+
+.catalog-search-form legend {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/*Раздел с результатами фильтрации*/
+.catalog-filter-found {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  background-color: #ffffff;
+}
+
+.catalog-filter-found span:last-of-type {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #000000;
+}
+
+.catalog-filter-sort {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: underline dotted #81b3d2;
+}
+
+.catalog-filter-sort:first-of-type {
+  color: #81b3d2;
+  text-decoration: none;
+}
+
+.catalog-filter-sort:hover,
+.catalog-filter-sort:focus {
+  color: #81b3d2;
+  text-decoration: underline dotted #81b3d2;
+}
+
+.catalog-filter-sort:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+.catalog-filter-up {
+  fill: #cacaca;
+}
+
+.catalog-filter-down {
+  fill: #81b3d2;
+}
+
+.catalog-filter-up:hover,
+.catalog-filter-up:focus,
+.catalog-filter-down:hover,
+.catalog-filter-down:focus {
+  fill: #000000;
+}
+
+.catalog-filter-up:active,
+.catalog-filter-down:active {
+  fill: #81b3d2;
+}
+
+/*Каталог - секция выбранных отелей*/
 .catalog-item {
   list-style: none;
 }
