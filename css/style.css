@@ -1,5 +1,12 @@
+html {
+  box-sizing: border-box; 
+}
+
+*, *::before, *::after { 
+  box-sizing: inherit; 
+}
+
 body {
-  width: 1200px;
   margin: 0;
   padding: 0;
 
@@ -27,18 +34,36 @@ a {
   margin: -1px;
 }
 
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .navigation {
+  position: relative;
   text-align: center;
   background-color: #ffffff;
 }
 
+.logo-image {
+  position: absolute;
+  left:529px;
+  right: 531px;
+}
+
 .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;;
   font-weight: bold;
   line-height: 26px;
   list-style: none;
 }
 
 .menu a {
+  display: block;
   color: #000000;
 }
 
@@ -69,15 +94,30 @@ a {
   margin-bottom: 79px;
 }
 
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 216px;
+}
+
 .intro-header {
+  width: 440px;
+  margin: 0;
+  margin-top: 61px;
+
   font-weight: bold;
   font-size: 21px;
-  line-height: 21px;
+  line-height: 26px;
   text-align: center;
   color: #000000;
 }
 
 .intro-text {
+  margin: 0;
+  margin-top: 38px;
+
   line-height: 26px;
   text-align: center;
   color: #333333;
@@ -105,6 +145,18 @@ a {
 
 /*Секция с предложением*/
 .promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 434px;
+  height: 96px;
+
+  margin-top: 57px;
+  margin-right: 383px;
+  margin-left: 383px;
+  margin-bottom: 138px;
+
   text-align: center;
 }
 
@@ -122,15 +174,35 @@ a {
 
 /*Форма поиска отелей на Главной*/
 .search {
-  width: 568px;
+  position: relative;
+  
   font-weight: bold;
   font-size: 14px;  
   color: #000000;
 }
 
+.search-form {
+  position: absolute;
+  z-index: 1;
+  left: 316px;
+  right: 316px;
+  width: 568px;
+  padding: 55px;
+
+  background-color: #ffffff;
+}
+
 .search-header {
+  display: block;
+  width: 568px;
+  margin: 0 316px;
+  padding: 0;
+  padding-top: 35px;
+  padding-bottom: 33px;
+
   font-size: 21px;
   line-height: 26px;
+  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #766357;
@@ -202,6 +274,11 @@ a {
 }
 
 /*Футер*/
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+
 .contact {
   font-weight: bold;  
   font-size: 21px;
@@ -211,6 +288,11 @@ a {
 
 .contact a {
   color: #000000;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .social-item {
@@ -274,9 +356,13 @@ a {
 
 /*Раздел с результатами фильтрации*/
 .catalog-filter-found {
+  padding: 30px;
+
   font-weight: bold;
   font-size: 21px;
   line-height: 26px; 
+
+  border-bottom: solid 1px #e5e5e5;
   background-color: #ffffff;
 }
 
@@ -332,7 +418,22 @@ a {
 
 /*Каталог - секция выбранных отелей*/
 .catalog-item {
+  display: flex;
+  justify-content: space-between;
+
   list-style: none;
+  border-bottom: solid 1px #e5e5e5;
+}
+
+.catalog-item-content {
+  width: 420px;
+}
+
+.catalog-item-content img {
+  display: block;
+  margin: 30px;
+  margin-left: 0;
+  float: left;
 }
 
 .catalog-item-header {
@@ -388,13 +489,21 @@ a {
   background-color: #503e33;
 }
 
-.catalog-item-rating span:last-child {
-  color: #666666;
-  background-color: #f2f2f2;
+.catalog-item-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .catalog-item-rating span:first-child {
   height: 17px;
+  margin-bottom: 47px;
+
   background-image: url("../img/star.svg");
   background-size: 18px 17px;
+}
+
+.catalog-item-rating span:last-child {
+  color: #666666;
+  background-color: #f2f2f2;
 }
