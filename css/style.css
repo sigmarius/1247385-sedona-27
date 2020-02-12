@@ -64,17 +64,12 @@ a {
   list-style: none;
 }
 
-.menu-left {
-  justify-content: flex-start;
-}
-
-.menu-right {
-  justify-content: flex-end;
+.menu li {
+  width: 25%;
 }
 
 .menu a {
   display: block;
-  width: 239px;
   padding: 22px 0;
   color: #000000;
 }
