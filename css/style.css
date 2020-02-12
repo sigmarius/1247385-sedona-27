@@ -68,6 +68,14 @@ a {
   width: 25%;
 }
 
+.menu .menu-left {
+  padding-right: 122px;
+}
+
+.menu .menu-right {
+  padding-left: 122px;
+}
+
 .menu a {
   display: block;
   padding: 22px 0;
