@@ -489,11 +489,15 @@ a {
 }
 
 /*Каталог - секция выбранных отелей*/
+.catalog ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .catalog-item {
   display: flex;
   justify-content: space-between;
-
-  list-style: none;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -504,7 +508,6 @@ a {
 
 .catalog-item-content img {
   margin: 30px;
-  margin-left: 0;
 }
 
 .catalog-item-header {
@@ -561,6 +564,7 @@ a {
 }
 
 .catalog-item-rating {
+  margin-right: 73px;
   display: flex;
   flex-direction: column;
   justify-content: center;
