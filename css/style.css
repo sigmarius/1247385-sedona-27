@@ -170,12 +170,20 @@ a {
 }
 
 .features-item {
-  width: 33%;
+  /*не знаю, можно ли так написать?.. если просто указать 33%-получается некрасивый зазор с одного края...*/
+  width: calc(100%/3); 
+
+  padding: 60px 70px 85px 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   text-align: center;
+}
+
+.gray {
+  background-color: #eeeeee;
 }
 
 /*Секция с предложением*/
@@ -392,16 +400,30 @@ a {
 /*Верхняя секция Фильтров Каталога*/
 .catalog-filter {
   background-image: url('../img/filter-background.jpg');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
 .catalog-search-form {
+  display: flex;
+  padding: 31px 72px;
   color: #ffffff;
+}
+
+.catalog-search-form ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .catalog-search-form legend {
   font-weight: bold;
   font-size: 16px;
+}
+
+.catalog-form-right {
+  padding-left: 350px;
 }
 
 /*Раздел с результатами фильтрации*/
