@@ -16,6 +16,7 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   color: #333333;
   text-transform: uppercase;
+
   background-color: #f2f2f2;
 }
 
@@ -38,13 +39,16 @@ a {
 .wrapper {
   width: 1200px;
   margin: 0 auto;
+
   background-color: #ffffff;
   box-shadow: 0 0 10px #aba9a7;
 }
 
 .navigation {
   position: relative;
+
   text-align: center;
+
   background-color: #ffffff;
 }
 
@@ -71,17 +75,34 @@ a {
   width: 25%;
 }
 
-.menu .menu-left {
-  padding-right: 122px;
+.menu li:first-child {
+  padding-left: 72px;
+
+  text-align: left;
 }
 
-.menu .menu-right {
+.menu li:last-child {
+  padding-right: 72px;
+
+  text-align: right;
+}
+
+.menu-left {
+  padding-right: 122px;
+
+  text-align: left;
+}
+
+.menu-right {
   padding-left: 122px;
+
+  text-align: right;
 }
 
 .menu a {
   display: block;
   padding: 22px 0;
+
   color: #000000;
 }
 
@@ -96,7 +117,9 @@ a {
 
 .intro-image {
   width: 1200px;
+
   text-align: center;
+
   background-image: url("../img/intro-mask.svg"),
                     url("../img/background-photo.jpg");
   background-repeat: no-repeat, 
@@ -153,9 +176,11 @@ a {
 
 .features-blue {
   display: flex;
+
+  text-align: center;
   color: #ffffff;
+
   background-color: #81b3d2; 
-  text-align: center; 
 }
 
 .features-blue h3 {
@@ -170,14 +195,8 @@ a {
 }
 
 .features-item {
-  /*не знаю, можно ли так написать?.. если просто указать 33%-получается некрасивый зазор с одного края...*/
   width: calc(100%/3); 
-
-  padding: 60px 70px 85px 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 60px 70px 85px;
 
   text-align: center;
 }
@@ -224,6 +243,7 @@ a {
   z-index: 1;
   left: 50%;
   transform: translate(-50%, 0);
+
   width: 568px;
   padding: 55px;
 
@@ -241,6 +261,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+
   background-color: #766357;
   border: none;
 }
@@ -248,11 +269,13 @@ a {
 .search-header:hover,
 .search-header:focus {
   color: #ffffff;
+
   background-color: #604e43;
 }
 
 .search-header:active {
   color: rgba(255, 255, 255, 0.3);
+
   background-color: #503e33;  
 }
 
@@ -260,6 +283,7 @@ a {
   font: inherit;
   text-transform: uppercase;
   color: #000000;
+
   background-color: #f2f2f2;
   border: none;  
 }
@@ -295,6 +319,7 @@ a {
   font: inherit;
   text-transform: uppercase;
   color: #ffffff;
+
   background-color: #81b3d2;  
   border: none;
 }
@@ -306,6 +331,7 @@ a {
 
 .search-button-submit:active {
   color: rgba(255, 255, 255, 0.3);
+
   background-color: #5496bd;
 }
 
@@ -335,20 +361,26 @@ a {
 
 .social {
   width: 33%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  list-style: none;
 }
 
 .social-item {
   width: 46px;
   height: 48px;  
+  margin: 0 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
-  list-style: none;
+
   background-color: #81b3d2;
 }
 
@@ -408,12 +440,14 @@ a {
 .catalog-search-form {
   display: flex;
   padding: 31px 72px;
+
   color: #ffffff;
 }
 
 .catalog-search-form ul {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -439,6 +473,8 @@ a {
 }
 
 .filter-found-text {
+  padding: 0 40px 0 49px;
+
   font-weight: normal;
   font-size: 12px;  
   line-height: 18px;
@@ -446,6 +482,9 @@ a {
 }
 
 .catalog-filter-sort {
+  padding: 0;
+  padding-right: 33px;
+
   font-size: 12px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
@@ -469,6 +508,7 @@ a {
 }
 
 .catalog-filter-up {
+  padding-left: 500px;
   fill: #cacaca;
 }
 
@@ -492,12 +532,14 @@ a {
 .catalog ul {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .catalog-item {
   display: flex;
   justify-content: space-between;
+  
   border-bottom: 1px solid #e5e5e5;
 }
 
