@@ -359,13 +359,18 @@ a {
   color: #000000;
 }
 
-.social {
+.social-wrapper {
   width: 33%;
-  margin: 0 auto;
+  display: flex;
+}
+
+.social {
+  width: 150px;
+  margin: auto;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   list-style: none;
@@ -374,7 +379,6 @@ a {
 .social-item {
   width: 46px;
   height: 48px;  
-  margin: 0 6px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -462,7 +466,8 @@ a {
 
 /*Раздел с результатами фильтрации*/
 .catalog-filter-found {
-  padding: 30px;
+  padding: 30px 72px;
+  display: flex;
 
   font-weight: bold;
   font-size: 21px;
@@ -481,9 +486,16 @@ a {
   color: #000000;
 }
 
+.found-links {
+  width: 240px;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .catalog-filter-sort {
   padding: 0;
-  padding-right: 33px;
 
   font-size: 12px;
   line-height: 18px;
@@ -531,7 +543,7 @@ a {
 /*Каталог - секция выбранных отелей*/
 .catalog ul {
   margin: 0;
-  padding: 0;
+  padding: 0 72px;
 
   list-style: none;
 }
@@ -550,6 +562,7 @@ a {
 
 .catalog-item-content img {
   margin: 30px;
+  margin-left: 0;
 }
 
 .catalog-item-header {
@@ -606,7 +619,6 @@ a {
 }
 
 .catalog-item-rating {
-  margin-right: 73px;
   display: flex;
   flex-direction: column;
   justify-content: center;
