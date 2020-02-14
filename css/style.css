@@ -73,6 +73,7 @@ a {
 
 .menu li {
   width: 25%;
+  padding: 22px 0;
 }
 
 .menu li:first-child {
@@ -100,9 +101,6 @@ a {
 }
 
 .menu a {
-  display: block;
-  padding: 22px 0;
-
   color: #000000;
 }
 
