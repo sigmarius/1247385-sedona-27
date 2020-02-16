@@ -73,7 +73,7 @@ a {
 
 .menu li {
   width: 25%;
-  padding: 22px 0;
+  padding: 14px 0;
 }
 
 .menu li:first-child {
@@ -88,14 +88,14 @@ a {
   text-align: right;
 }
 
-.menu-left {
-  padding-right: 122px;
+.menu .menu-left {
+  padding-left: 13px;
 
   text-align: left;
 }
 
-.menu-right {
-  padding-left: 122px;
+.menu .menu-right {
+  padding-right: 16px;
 
   text-align: right;
 }
