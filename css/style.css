@@ -22,6 +22,7 @@ body {
 
 img { 
   max-width: 100%; 
+  height: auto;
 }
 
 a { 
@@ -124,23 +125,23 @@ a {
                      no-repeat;
   background-size: 1203px 59px,
                    cover;
-  background-position: center 101%,
+  background-position: center 100.3%,
                        center bottom;
 }
 
 .intro-image {
   padding-top: 76px;
-  padding-bottom: 79px;
+  padding-bottom: 76px;
 }
 
 .intro-content {
-  padding: 61px 0 56px 0;
+  padding: 60px 0 56px 0;
 }
 
 .intro-header {
   width: 440px;
   margin: 0 auto;
-  padding-bottom: 38px;
+  padding-bottom: 26px;
 
   font-weight: bold;
   font-size: 21px;
@@ -250,12 +251,15 @@ a {
   position: absolute;
   z-index: 1;
   left: 50%;
-  transform: translate(-50%, 0);
 
+  display: flex;
+  flex-wrap: wrap;
   width: 568px;
   padding: 55px;
 
   background-color: #ffffff;
+
+  transform: translate(-50%, 0);
 }
 
 .search-header {
@@ -285,6 +289,67 @@ a {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #503e33;  
+}
+
+.search-form p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.full-width {
+  position: relative;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.full-width .search-input {
+  width: 346px;
+  padding: 14px 43px 13px 13px;
+
+  background-image: url('../img/calendar.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+/*
+.full-width label::after {
+  position: absolute;
+  right: 9px;
+
+  width: 21px;
+  height: 22px;
+
+  content: "";
+  background-image: url('../img/calendar.png');
+  background-position: 0 0;
+}
+
+ /* .full-width::after {
+  position: absolute;
+  right: 9px;
+
+  width: 21px;
+  height: 22px;
+
+  content: "";
+  background-image: url('../img/calendar.png');
+  background-position: 0 0;
+}
+*/
+
+.search-input:hover {
+  background-position: 21px 0;
+} 
+
+.search-input:active {
+  background-position: 42px 0;
+}  
+
+.half-width {
+  width: 50%;
+  box-sizing: border-box;
 }
 
 .search-input {
@@ -324,7 +389,13 @@ a {
 }
 
 .search-button-submit {
+  width: 100%;
+  padding-top: 17px ;
+  padding-bottom: 22px;
+
   font: inherit;
+  font-size: 21px;
+  line-height: 26px;
   text-transform: uppercase;
   color: #ffffff;
 
