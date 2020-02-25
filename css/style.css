@@ -307,13 +307,9 @@ a {
 .full-width .search-input {
   width: 346px;
   padding: 14px 43px 13px 13px;
-
-  background-image: url('../img/calendar.png');
-  background-position: 0 0;
-  background-repeat: no-repeat;
+  order: 1;
 }
 
-/*
 .full-width label::after {
   position: absolute;
   right: 9px;
@@ -339,7 +335,7 @@ a {
 }
 */
 
-.search-input:hover {
+.search-input:hover + label::after {
   background-position: 21px 0;
 } 
 
