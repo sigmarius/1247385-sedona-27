@@ -130,8 +130,7 @@ a {
 }
 
 .intro-image {
-  padding-top: 76px;
-  padding-bottom: 76px;
+  padding: 76px 0;
 }
 
 .intro-content {
@@ -291,7 +290,7 @@ a {
   background-color: #503e33;  
 }
 
-.search-form p {
+.search-form div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -300,7 +299,6 @@ a {
 .full-width {
   position: relative;
 
-  margin: 0;
   padding-bottom: 30px;
   width: 100%;
   box-sizing: border-box;
@@ -308,6 +306,7 @@ a {
 
 .full-width .search-input {
   width: 346px;
+  height: 38px;
   padding: 14px 43px 13px 13px;
   order: 1;
 }
@@ -358,7 +357,6 @@ a {
 }
 
 .half-width {
-  margin: 0;
   padding-bottom: 54px;
   width: 50%;
   box-sizing: border-box;
@@ -371,6 +369,8 @@ a {
   font-size: 24px;
   font-weight: bold;
   color: #cacaca;  
+
+  cursor: pointer;
 }
 
 .search-button:hover,
@@ -388,6 +388,12 @@ a {
   padding-left: 16px;
 }
 
+.search-input::-webkit-inner-spin-button,
+.search-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .half-width label {
   margin-right: auto;
 }
@@ -398,8 +404,7 @@ a {
 
 .search-button-submit {
   width: 100%;
-  padding-top: 17px ;
-  padding-bottom: 22px;
+  padding: 16px 0;
 
   font: inherit;
   font-size: 21px;
@@ -409,6 +414,8 @@ a {
 
   background-color: #81b3d2;  
   border: none;
+
+  cursor: pointer;
 }
 
 .search-button-submit:hover,
@@ -690,10 +697,15 @@ a {
 .catalog-controls a {
   display: inline-block;
   padding: 8px 17px 7px;
-  margin-right: 5px;
 
   font-weight: bold;
   color: #ffffff;
+
+  cursor: pointer;
+}
+
+.catalog-controls a:not(:last-child) {
+  margin-right: 5px;
 }
 
 .button-info {
