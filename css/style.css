@@ -312,7 +312,7 @@ a {
   order: 1;
 }
 
-.full-width label::after {
+.search-calendar {
   position: absolute;
   right: 9px;
 
@@ -324,13 +324,12 @@ a {
   background-position: 0 0;
 }
 
-.search-input:hover + label::after
- {
+.search-input:hover + .search-calendar {
   background-position: 42px 0;
 } 
 
-.search-input:focus + label::after,
-.search-input:active + label::after {
+.search-input:focus + .search-calendar,
+.search-input:active + .search-calendar {
   background-position: 21px 0;
 } 
 
