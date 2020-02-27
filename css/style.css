@@ -134,13 +134,13 @@ a {
 }
 
 .intro-content {
-  padding: 60px 0 56px 0;
+  padding: 60px 0 53px 0;
 }
 
 .intro-header {
   width: 440px;
   margin: 0 auto;
-  padding-bottom: 26px;
+  padding-bottom: 25px;
 
   font-weight: bold;
   font-size: 21px;
@@ -186,7 +186,7 @@ a {
 }
 
 .features-text {
-  padding: 45px 60px 65px;
+  padding: 45px 38px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -194,17 +194,62 @@ a {
 
 .features-text h3,
 .features-item h3 {
-  margin-top: 0;
+  margin: 0;
+  padding: 0 65px 25px;
 }
 
 .features-text p,
 .features-item p {
-  margin-bottom: 0;
+  margin: 0;
+  padding: 20px 10px 30px;
+}
+
+.features-item-icons {
+  position: relative;
+
+  width: calc(100%/3); 
+  min-height: 330px;
+  padding: 160px 55px 60px;
+
+  text-align: center;
+}
+
+.features-item-icons h3,
+.features-item-icons p {
+  margin: 0;
+  padding-bottom: 24px;
+}
+
+.features-item-icons h3::before {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.icon-house h3::before {
+  content: url('../img/home-icon.svg');
+  width: 75px;
+  height: 72px;;
+}
+
+.icon-food h3::before {
+  content: url('../img/food-icon.svg');
+  width: 74px;
+  height: 70px;
+}
+
+.icon-box h3::before {
+  top: 55px;
+  content: url('../img/box-icon.svg');
+  width: 64px;
+  height: 76px;
 }
 
 .features-item {
   width: calc(100%/3); 
-  padding: 60px 70px 85px;
+  padding: 45px 57px 42px;
 
   text-align: center;
 }
@@ -213,26 +258,34 @@ a {
   background-color: #eeeeee;
 }
 
+.gray p {
+  padding: 20px 12px 30px;
+}
+
 /*Секция с предложением*/
 .promo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 434px;
   margin: 0 auto;
-  padding: 57px 0 52px 0;
+  padding: 37px 0 45px 0;
 
   text-align: center;
 }
 
 .promo-header {
+  margin: 0;
+  padding: 0 10px 25px;
+
   font-size: 30px;
   line-height: 36px;
   color: #000000;
 }
 
 .promo-text {
+  margin: 0;
+
   font-size: 14px;
   line-height: 24px;
   color: #333333;
@@ -265,7 +318,7 @@ a {
   display: block;
   width: 568px;
   margin: 0 auto;
-  padding: 35px 0 33px 0;
+  padding: 30px 0;
 
   font-size: 21px;
   line-height: 26px;
@@ -290,7 +343,8 @@ a {
   background-color: #503e33;  
 }
 
-.search-form div {
+.full-width,
+.half-width {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -317,19 +371,28 @@ a {
 
   width: 21px;
   height: 22px;
+  padding: 0;
 
-  content: "";
-  background-image: url('../img/calendar.png');
-  background-position: 0 0;
+  border: none;
+  background: none;
+  
+  cursor: pointer;
 }
 
-.search-input:hover + .search-calendar {
-  background-position: 42px 0;
+.search-calendar svg {
+  fill: #cacaca;
+}
+
+.search-input:hover + .search-calendar svg,
+.search-calendar:hover svg {
+  fill: #000000;
 } 
 
-.search-input:focus + .search-calendar,
-.search-input:active + .search-calendar {
-  background-position: 21px 0;
+.search-input:focus + .search-calendar svg,
+.search-calendar:focus svg,
+.search-input:active + .search-calendar svg,
+.search-calendar:active svg {
+  fill: #81b3d2;
 } 
 
 .search-input {
@@ -369,6 +432,7 @@ a {
   font-size: 24px;
   font-weight: bold;
   color: #cacaca;  
+  border: none;
 
   cursor: pointer;
 }
@@ -385,7 +449,9 @@ a {
 .half-width .search-input {
   width: 38px;
   height: 38px;
-  padding-left: 16px;
+  padding: 0 6px;
+
+  text-align: center;
 }
 
 .search-input::-webkit-inner-spin-button,
