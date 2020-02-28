@@ -166,12 +166,6 @@ a {
   list-style: none;
 }
 
-.features h3 {
-  font-weight: bold;
-  font-size: 21px;  
-  color: #000000;
-}
-
 .features-blue {
   display: flex;
 
@@ -181,7 +175,7 @@ a {
   background-color: #81b3d2; 
 }
 
-.features-blue h3 {
+.features-blue .features-header {
   color: #ffffff;
 }
 
@@ -192,59 +186,18 @@ a {
   justify-content: center;
 }
 
-.features-text h3,
-.features-item h3 {
-  margin: 0;
-  padding: 0 65px 25px;
-}
-
-.features-text p,
-.features-item p {
+.features-text p {
   margin: 0;
   padding: 20px 10px 30px;
 }
 
-.features-item-icons {
-  position: relative;
-
-  width: calc(100%/3); 
-  min-height: 330px;
-  padding: 160px 55px 60px;
-
-  text-align: center;
-}
-
-.features-item-icons h3,
-.features-item-icons p {
+.features-header {
   margin: 0;
-  padding-bottom: 24px;
-}
+  padding: 0 65px 25px;
 
-.features-item-icons h3::before {
-  position: absolute;
-  top: 60px;
-  left: 50%;
-
-  transform: translateX(-50%);
-}
-
-.icon-house h3::before {
-  content: url('../img/home-icon.svg');
-  width: 75px;
-  height: 72px;;
-}
-
-.icon-food h3::before {
-  content: url('../img/food-icon.svg');
-  width: 74px;
-  height: 70px;
-}
-
-.icon-box h3::before {
-  top: 55px;
-  content: url('../img/box-icon.svg');
-  width: 64px;
-  height: 76px;
+  font-weight: bold;
+  font-size: 21px;  
+  color: #000000;
 }
 
 .features-item {
@@ -254,12 +207,45 @@ a {
   text-align: center;
 }
 
+.features-item p {
+  margin: 0;
+  padding: 0 0 30px;
+}
+
+.features-item.icon-house {
+  min-height: 330px;
+  padding: 160px 55px 30px;
+
+  background: url('../img/home-icon.svg') no-repeat;
+  background-position: center 60px;
+}
+
+.features-item.icon-food {
+  min-height: 330px;
+  padding: 160px 55px 30px;
+
+  background: url('../img/food-icon.svg') no-repeat;
+  background-position: center 60px;
+}
+
+.features-item.icon-box {
+  min-height: 330px;
+  padding: 160px 55px 30px;
+
+  background: url('../img/box-icon.svg') no-repeat;
+  background-position: center 55px;
+}
+
 .gray {
   background-color: #eeeeee;
 }
 
 .gray p {
   padding: 20px 12px 30px;
+}
+
+.gray:last-child p {
+  padding: 20px 15px 30px;
 }
 
 /*Секция с предложением*/
@@ -343,11 +329,12 @@ a {
   background-color: #503e33;  
 }
 
-.full-width,
-.half-width {
+.form-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  box-sizing: border-box;
 }
 
 .full-width {
@@ -355,7 +342,6 @@ a {
 
   padding-bottom: 30px;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .full-width .search-input {
@@ -365,7 +351,7 @@ a {
   order: 1;
 }
 
-.search-calendar {
+.button-calendar {
   position: absolute;
   right: 9px;
 
@@ -379,19 +365,16 @@ a {
   cursor: pointer;
 }
 
-.search-calendar svg {
+.image-calendar {
   fill: #cacaca;
 }
 
-.search-input:hover + .search-calendar svg,
-.search-calendar:hover svg {
+.button-calendar:hover .image-calendar,
+.button-calendar:focus .image-calendar {
   fill: #000000;
 } 
 
-.search-input:focus + .search-calendar svg,
-.search-calendar:focus svg,
-.search-input:active + .search-calendar svg,
-.search-calendar:active svg {
+.button-calendar:active .image-calendar {
   fill: #81b3d2;
 } 
 
@@ -422,7 +405,6 @@ a {
 .half-width {
   padding-bottom: 54px;
   width: 50%;
-  box-sizing: border-box;
 }
 
 .search-button {
