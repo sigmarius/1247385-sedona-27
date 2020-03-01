@@ -38,16 +38,16 @@
             <fieldset>
               <legend>Инфраструктура</legend>
               <ul>
-                <li>
-                  <input id="swimming-pool" type="checkbox" name="swimming-pool" checked>
+                <li class="filter-option">
+                  <input id="swimming-pool" class="visually-hidden filter-input-checkbox" type="checkbox" name="swimming-pool" checked>
                   <label for="swimming-pool">Бассейн</label>
                 </li>
-                <li>
-                  <input id="parking" type="checkbox" name="parking">
+                <li class="filter-option">
+                  <input id="parking" class="visually-hidden filter-input-checkbox" type="checkbox" name="parking">
                   <label for="parking">Парковка</label>
                 </li>
-                <li>
-                  <input id="wi-fi" type="checkbox" name="wi-fi">
+                <li class="filter-option">
+                  <input id="wi-fi" class="visually-hidden filter-input-checkbox" type="checkbox" name="wi-fi">
                   <label for="wi-fi">Wi-Fi</label>
                 </li>
               </ul>
@@ -55,35 +55,37 @@
             <fieldset>
               <legend>Тип жилья</legend>
               <ul>
-                <li>
-                  <input id="hotel" type="checkbox" name="hotel" checked>
+                <li class="filter-option">
+                  <input id="hotel" class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" checked>
                   <label for="hotel">Гостиница</label>
                 </li>
-                <li>
-                  <input id="motel" type="checkbox" name="motel" checked>
+                <li class="filter-option">
+                  <input id="motel" class="visually-hidden filter-input-checkbox" type="checkbox" name="motel" checked>
                   <label for="motel">Мотель</label>
                 </li>
-                <li>
-                  <input id="appartment" type="checkbox" name="appartment" checked>
+                <li class="filter-option">
+                  <input id="appartment" class="visually-hidden filter-input-checkbox" type="checkbox" name="appartment" checked>
                   <label for="appartment">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
             <div class="catalog-form-right">
-              <p>Стоимость в сутки(р):</p>
-                <span>от 0</span>
-                <span>до 3000</span>
-              <div>
-                <!--обёртка, div для элементов - полоска <span> по которой движутся круглые контролы <button> -->
-                <span></span>
-                <button type="button" aria-label="Увеличить"></button>
-                <button type="button" aria-label="Уменьшить"></button>
+              <div class="catalog-range-title">Стоимость в сутки (р):</div>
+              <div class="catalog-price-controls">
+                <label for="min-price" class="min-price">от </label>
+                <input id="min-price" type="number" name="min-price" min="0" max="3000" value="0">
+                <label for="max-price" class="max-price">до </label>
+                <input id="max-price" type="number" name="max-price" min="0" max="3000" value="3000">
               </div>
-                <label for="min-price" class="visually-hidden">Минимальная стоимость</label>
-                <label for="max-price" class="visually-hidden">Максимальная стоимость</label>
-                <input id="min-price" type="number" name="min-price" min="0" max="3000">
-                <input id="max-price" type="number" name="max-price" min="0" max="3000">
-                <button type="submit">Показать</button>
+              <div class="catalog-range-controls">
+                <!--обёртка, div для элементов - полоска <div class="bar"> по которой движутся круглые контролы <button> -->
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <button class="range-toggle range-toggle-min" type="button" aria-label="Увеличить"></button>
+                <button class="range-toggle range-toggle-max" type="button" aria-label="Уменьшить"></button>
+              </div>
+                <button class="btn-transparent" type="submit">Показать</button>
               </div>            
           </form>
         <!-- раздел с результатами фильтрации -->
@@ -187,12 +189,12 @@
       </main>
 
       <footer class="footer">
-        <div class="contact">
+        <div class="footer-block contact">
           <p>#visitSEDONA</p>
           <a href="tel:+74956660266">Тел: +7(495) 666-02-66</a>
         </div>
-        <div class="social-wrapper">
-          <ul class="social">
+        <div class="footer-block social">
+          <ul class="social-list">
               <li class="social-item">
                 <a href="#" aria-label="Твитер">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15" class="social-icon">
@@ -216,7 +218,7 @@
               </li>
           </ul>
         </div>
-        <div class="copyright">
+        <div class="footer-block copyright">
           <span>Website by</span>
           <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Логотип HTML Academy">
             <svg xmlns="http://www.w3.org/2000/svg" width="115" height="41" viewBox="0 0 108.08 36.85" class="copyright-icon">
