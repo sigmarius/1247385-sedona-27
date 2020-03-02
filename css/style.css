@@ -134,7 +134,7 @@ a {
 }
 
 .intro-content {
-  padding: 60px 0 53px 0;
+  padding: 60px 0 52px 0;
 }
 
 .intro-header {
@@ -202,7 +202,7 @@ a {
 
 .features-item {
   width: calc(100%/3); 
-  padding: 160px 55px 50px;
+  padding: 160px 55px 52px;
 
   text-align: center;
 }
@@ -244,7 +244,7 @@ a {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 37px 0 45px 0;
+  padding: 36px 0 45px 0;
 
   text-align: center;
 }
@@ -293,7 +293,7 @@ a {
   display: block;
   width: 568px;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 30px 0 31px;
 
   font-size: 21px;
   line-height: 26px;
@@ -330,6 +330,7 @@ a {
   position: relative;
 
   padding-bottom: 30px;
+  padding-left: 1px;
   width: 100%;
 }
 
@@ -392,7 +393,7 @@ a {
 }
 
 .half-width {
-  padding-bottom: 54px;
+  padding-bottom: 53px;
   width: 50%;
 }
 
@@ -436,7 +437,7 @@ a {
 }
 
 .half-width:nth-child(2n) label {
-  padding-left: 53px;
+  padding-left: 51px;
 }
 
 .search-button-submit {
@@ -489,7 +490,7 @@ a {
 }
 
 .contact {
-  padding: 12px 0 0px 130px;
+  padding: 11px 0 0px 130px;
 
   font-weight: bold;  
   font-size: 21px;
@@ -499,7 +500,7 @@ a {
 
 .contact p {
   margin: 0;
-  padding-bottom: 16px;
+  padding: 0 0 16px 2px;
 }
 
 .contact a {
@@ -515,6 +516,7 @@ a {
   width: 150px;
   margin: 0 auto;
   padding: 0;
+  padding-top: 1px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -526,6 +528,7 @@ a {
 .social-item {
   width: 46px;
   height: 48px;  
+  padding-top: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -563,6 +566,10 @@ a {
   color: #000000;
 }
 
+.copyright a {
+  padding-top: 3px;
+}
+
 .copyright-icon {
   margin-left: 8px;
 }
@@ -574,6 +581,10 @@ a {
 
 .copyright-icon:active {
   fill: #bdbbbc;
+}
+
+.text-copyright {
+  padding-bottom: 7px;
 }
 
 /*Страница Каталога*/
@@ -623,7 +634,7 @@ a {
   padding: 0 0 25px 42px;
 }
 
-.filter-option label {
+.filter-option-label {
   position: relative;
 
   display: block;
@@ -632,7 +643,7 @@ a {
   user-select: none;
 }
 
-.filter-input-checkbox + label::before {
+.filter-input-checkbox + .filter-option-label::before {
   position: absolute;
   left: -39px;
   top: -2px;
@@ -643,7 +654,7 @@ a {
   content: url("../img/checkbox-off.svg");
 }
 
-.filter-input-checkbox:checked + label::before {
+.filter-input-checkbox:checked + .filter-option-label::before {
   content: url("../img/checkbox-on.svg");
 }
 
