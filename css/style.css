@@ -751,32 +751,42 @@ a {
 
 .range-toggle {
   position: absolute;
-  top: -14px;
+  top: -9px;
   
-  width: 32px;
-  height: 32px;
+  width: 21px;
+  height: 21px;
 
-  background: #ababab;
-  border: 11px solid #ffffff;
+  background: #ffffff;
+  border: none;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
 
   cursor: pointer;
-  transform: scale(0.65);
+}
+
+.range-toggle::before {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  width: 5px;
+  height: 5px;
+
+  content: "";
+  border-radius: 50%;
+  background: #ababab;
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
-
-  transform: scale(0.75);
+  transform: scale(1.15);
 }
 
 .range-toggle-min {
-  left: -7px;
+  left: -2px;
 }
 
 .range-toggle-max {
-  left: 77%;
+  left: 79%;
 }
 
 .btn-transparent {
