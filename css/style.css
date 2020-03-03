@@ -134,13 +134,12 @@ a {
 }
 
 .intro-content {
-  padding: 60px 0 52px 0;
+  padding: 59px 0 51px 0;
 }
 
 .intro-header {
   width: 440px;
-  margin: 0 auto;
-  padding-bottom: 25px;
+  margin: 0 auto 29px;
 
   font-weight: bold;
   font-size: 21px;
@@ -202,7 +201,7 @@ a {
 
 .features-item {
   width: calc(100%/3); 
-  padding: 160px 55px 52px;
+  padding: 160px 55px 53px;
 
   text-align: center;
 }
@@ -228,7 +227,7 @@ a {
 }
 
 .gray {
-  padding: 48px 57px 42px;
+  padding: 47px 57px 42px;
 
   background-color: #eeeeee;
 }
@@ -244,7 +243,7 @@ a {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 36px 0 45px 0;
+  padding: 38px 0 46px 0;
 
   text-align: center;
 }
@@ -337,7 +336,7 @@ a {
 .full-width .search-input {
   width: 346px;
   height: 38px;
-  padding: 14px 43px 13px 13px;
+  padding: 13px 43px 13px 13px;
   order: 1;
 }
 
@@ -370,6 +369,7 @@ a {
 
 .search-input {
   font: inherit;
+  line-height: 26px;
   text-transform: uppercase;
   color: #000000;
 
@@ -378,6 +378,7 @@ a {
 }
 
 .search-input::placeholder {
+  line-height: 26px;
   color: #000000;
 }
 
@@ -477,7 +478,7 @@ a {
 
 /*Футер*/
 .footer {
-  padding: 35px 0 22px;
+  padding: 29px 0 22px;
   display: flex;
   justify-content: space-between;
 
@@ -490,7 +491,8 @@ a {
 }
 
 .contact {
-  padding: 11px 0 0px 130px;
+  padding: 0;
+  padding-left: 124px;
 
   font-weight: bold;  
   font-size: 21px;
@@ -500,7 +502,8 @@ a {
 
 .contact p {
   margin: 0;
-  padding: 0 0 16px 2px;
+  padding: 0;
+  padding-bottom: 7px;
 }
 
 .contact a {
@@ -516,7 +519,7 @@ a {
   width: 150px;
   margin: 0 auto;
   padding: 0;
-  padding-top: 1px;
+  padding-top: 6px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -525,17 +528,17 @@ a {
   list-style: none;
 }
 
-.social-item {
-  width: 46px;
-  height: 48px;  
-  padding-top: 7px;
+.social-item { 
+  background-color: #81b3d2;
+  cursor: pointer;
+}
+
+.social-item a {
+  width: 48px;
+  height: 48px; 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  text-align: center;
-
-  background-color: #81b3d2;
 }
 
 .social-icon {
@@ -567,7 +570,7 @@ a {
 }
 
 .copyright a {
-  padding-top: 3px;
+  padding-top: 9px;
 }
 
 .copyright-icon {
@@ -584,7 +587,7 @@ a {
 }
 
 .text-copyright {
-  padding-bottom: 7px;
+  padding-top: 4px;
 }
 
 /*Страница Каталога*/
