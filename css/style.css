@@ -784,6 +784,7 @@ a {
 
 .range-toggle:hover {
   transform: scale(1.15);
+  transition: all 0.2s ease;
 }
 
 .range-toggle-min {
