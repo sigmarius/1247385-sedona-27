@@ -134,8 +134,8 @@ a {
 }
 
 .intro-content {
-  padding: 59px 0 0 0;
   margin-bottom: 49px;
+  padding: 59px 0 0 0;
 }
 
 .intro-header {
@@ -159,10 +159,11 @@ a {
 
 /*Секция Преимуществ*/
 .features ul {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -180,10 +181,10 @@ a {
 }
 
 .features-text {
-  padding: 45px 38px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 45px 38px 30px;
 }
 
 .features-text p {
@@ -193,7 +194,8 @@ a {
 
 .features-header {
   margin: 0;
-  padding: 0 65px 25px;
+  margin-bottom: 25px;
+  padding: 0 65px;
 
   font-weight: bold;
   font-size: 21px;  
@@ -335,15 +337,19 @@ a {
   width: 100%;
 }
 
+.full-width label {
+  width: 25%;
+}
+
 .full-width .search-input {
-  width: 346px;
+  width: 75%;
   height: 38px;
-  padding: 13px 43px 13px 13px;
-  order: 1;
+  padding: 0 43px 0 13px;
 }
 
 .button-calendar {
   position: absolute;
+  top: 8px;
   right: 9px;
 
   width: 21px;
@@ -396,8 +402,8 @@ a {
 }
 
 .half-width {
-  padding-bottom: 53px;
   width: 50%;
+  padding-bottom: 53px;
 }
 
 .search-button {
@@ -431,8 +437,11 @@ a {
 
 .search-input::-webkit-inner-spin-button,
 .search-input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
   margin: 0;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .half-width label {
@@ -480,12 +489,13 @@ a {
 
 /*Футер*/
 .footer {
-  padding: 30px 0 7px;
+  position: relative;
+
   display: flex;
   justify-content: space-between;
+  padding: 30px 0 7px;
 
-  background-color: #ffffff;
-  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .footer-block {
@@ -518,29 +528,30 @@ a {
 }
 
 .social-list {
-  width: 150px;
-  margin: 0 auto;
-  padding: 0;
-  padding-top: 6px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 150px;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 6px;
 
   list-style: none;
 }
 
 .social-item { 
   background-color: #81b3d2;
+
   cursor: pointer;
 }
 
 .social-item a {
-  width: 48px;
-  height: 48px; 
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 48px;
+  height: 48px; 
 }
 
 .social-icon {
@@ -561,11 +572,11 @@ a {
 }
 
 .copyright {
-  padding: 0;
-  padding-bottom: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  padding-bottom: 25px;
 
   line-height: 26px;
   color: #000000;
@@ -600,6 +611,7 @@ a {
 /*Верхняя секция Фильтров Каталога*/
 .catalog-filter {
   min-height: 297px;
+
   background-image: url('../img/filter-background.jpg');
   background-size: cover;
   background-position: center;
@@ -731,8 +743,11 @@ a {
 
 .catalog-price-controls input::-webkit-inner-spin-button,
 .catalog-price-controls input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
   margin: 0;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .catalog-range-controls {
@@ -821,8 +836,8 @@ a {
 
 /*Раздел с результатами фильтрации*/
 .catalog-filter-found {
-  padding: 30px 76px 30px 72px;
   display: flex;
+  padding: 30px 76px 30px 72px;
 
   font-weight: bold;
   font-size: 21px;
@@ -842,11 +857,11 @@ a {
 }
 
 .found-links {
-  width: 240px;
-  margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  width: 240px;
+  margin-right: auto;
 }
 
 .catalog-filter-sort {
@@ -903,10 +918,10 @@ a {
 }
 
 .catalog-item {
-  padding: 30px 72px 24px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 30px 72px 24px;
   
   border-bottom: 1px solid #e5e5e5;
 }
@@ -947,8 +962,8 @@ a {
 
 
 .catalog-item-text span {
-  width: 43%;
   display: inline-block;
+  width: 43%;
 }
 
 .catalog-controls a {
@@ -976,6 +991,7 @@ a {
 
 .button-info:active {
   color: rgba(255, 255, 255, 0.3);
+
   background-color: #5496bd;  
 }
 
@@ -990,6 +1006,7 @@ a {
 
 .button-book:active {
   color: rgba(255, 255, 255, 0.3);
+
   background-color: #503e33;
 }
 
