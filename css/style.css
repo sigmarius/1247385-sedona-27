@@ -134,7 +134,7 @@ a {
 }
 
 .intro-content {
-  margin-bottom: 49px;
+  margin-bottom: 51px;
   padding: 59px 0 0 0;
 }
 
@@ -158,6 +158,10 @@ a {
 }
 
 /*Секция Преимуществ*/
+.features {
+  margin-bottom: 39px;
+}
+
 .features ul {
   display: flex;
   flex-wrap: wrap;
@@ -204,7 +208,7 @@ a {
 
 .features-item {
   width: calc(100%/3); 
-  padding: 160px 55px 52px;
+  padding: 160px 55px 53px;
 
   text-align: center;
 }
@@ -246,7 +250,6 @@ a {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto 45px;
-  padding: 37px 0 0 0;
 
   text-align: center;
 }
@@ -385,7 +388,7 @@ a {
   border: none;  
 }
 
-.search-input::placeholder {
+.full-width .search-input::placeholder {
   line-height: 26px;
   color: #000000;
 }
@@ -435,13 +438,15 @@ a {
   text-align: center;
 }
 
+.search-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .search-input::-webkit-inner-spin-button,
 .search-input::-webkit-outer-spin-button {
   margin: 0;
 
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 .half-width label {
@@ -504,7 +509,7 @@ a {
 
 .contact {
   padding: 0;
-  padding-left: 129px;
+  padding-left: 124px;
 
   font-weight: bold;  
   font-size: 21px;
@@ -515,7 +520,7 @@ a {
 .contact p {
   margin: 0;
   padding: 0;
-  padding-bottom: 7px;
+  padding-bottom: 6px;
 }
 
 .contact a {
@@ -741,13 +746,15 @@ a {
   border: none;
 }
 
+.catalog-price-controls input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .catalog-price-controls input::-webkit-inner-spin-button,
 .catalog-price-controls input::-webkit-outer-spin-button {
   margin: 0;
 
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 .catalog-range-controls {
