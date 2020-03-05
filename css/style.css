@@ -13,7 +13,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   color: #333333;
   text-transform: uppercase;
 
@@ -514,10 +514,6 @@ a {
 
 .footer-block {
   width: calc(100%/3); 
-}
-
-.footer-wrapper {
-  margin: 0 auto;
 }
 
 .contact {
