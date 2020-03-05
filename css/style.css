@@ -13,7 +13,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   color: #333333;
   text-transform: uppercase;
 
@@ -159,7 +159,7 @@ a {
 
 /*Секция Преимуществ*/
 .features {
-  margin-bottom: 69px;
+  margin-bottom: 51px;
 }
 
 .features ul {
@@ -240,7 +240,7 @@ a {
 }
 
 .gray {
-  padding: 47px 60px 42px;
+  padding: 47px 60px 60px;
 
   background-color: #eeeeee;
 }
@@ -502,10 +502,12 @@ a {
 /*Футер*/
 .footer {
   position: relative;
+  bottom: 0;
 
   display: flex;
   justify-content: space-between;
-  padding: 30px 0 7px;
+  min-height: 120px;
+  padding-top: 30px;
 
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -514,9 +516,12 @@ a {
   width: calc(100%/3); 
 }
 
+.footer-wrapper {
+  margin: 0 auto;
+}
+
 .contact {
   padding: 0;
-  padding-left: 124px;
 
   font-weight: bold;  
   font-size: 21px;
@@ -524,10 +529,14 @@ a {
   color: #000000;
 }
 
+.contact .footer-wrapper {
+  padding-left: 124px;
+}
+
 .contact p {
   margin: 0;
+  margin-bottom: 6px;
   padding: 0;
-  padding-bottom: 6px;
 }
 
 .contact a {
@@ -586,12 +595,17 @@ a {
 .copyright {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 0;
-  padding-bottom: 25px;
 
   line-height: 26px;
   color: #000000;
+}
+
+.copyright .footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .copyright a {
@@ -609,10 +623,6 @@ a {
 
 .copyright-icon:active {
   fill: #bdbbbc;
-}
-
-.text-copyright {
-  padding-top: 4px;
 }
 
 /*Страница Каталога*/
@@ -951,7 +961,8 @@ a {
 
 .catalog-item-header {
   margin: 0;
-  padding: 0 0 10px 0;
+  margin-bottom: 11px;
+  padding: 0;
 
   font-weight: bold;
   font-size: 21px;
@@ -970,7 +981,8 @@ a {
 
 .catalog-item-text p {
   margin: 0;
-  padding: 0 0 14px 0;
+  margin-bottom: 14px;
+  padding: 0;
 }
 
 
