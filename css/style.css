@@ -188,12 +188,12 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 45px 38px 30px;
+  padding: 45px 48px 60px;
 }
 
 .features-text p {
   margin: 0;
-  padding: 20px 10px 30px;
+  padding: 0;
 }
 
 .features-header {
@@ -206,16 +206,20 @@ a {
   color: #000000;
 }
 
+.features-header + span {
+  margin-bottom: 20px;
+}
+
 .features-item {
   width: calc(100%/3); 
-  padding: 160px 55px 53px;
+  padding: 160px 55px 83px;
 
   text-align: center;
 }
 
 .features-item p {
   margin: 0;
-  padding: 0 0 30px;
+  padding: 0;
 }
 
 .features-item.house {
@@ -347,7 +351,7 @@ a {
 .full-width .search-input {
   width: 75%;
   height: 38px;
-  padding: 7px 43px 7px 13px;
+  padding: 7px 43px 7px 9px;
 }
 
 .button-calendar {
