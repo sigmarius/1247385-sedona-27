@@ -347,7 +347,7 @@ a {
 .full-width .search-input {
   width: 75%;
   height: 38px;
-  padding: 0 43px 0 13px;
+  padding: 7px 43px 7px 13px;
 }
 
 .button-calendar {
@@ -388,7 +388,14 @@ a {
   border: none;  
 }
 
-.full-width .search-input::placeholder {
+.search-input::-moz-placeholder {
+  line-height: 26px;
+  color: #000000;
+
+  opacity: 1;
+}
+
+.search-input::placeholder {
   line-height: 26px;
   color: #000000;
 }
@@ -436,9 +443,7 @@ a {
   padding: 0 6px;
 
   text-align: center;
-}
 
-.search-input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -500,7 +505,7 @@ a {
   justify-content: space-between;
   padding: 30px 0 7px;
 
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-block {
@@ -744,9 +749,7 @@ a {
   color: #ffffff;
   background: none;
   border: none;
-}
 
-.catalog-price-controls input[type="number"] {
   -moz-appearance: textfield;
 }
 
