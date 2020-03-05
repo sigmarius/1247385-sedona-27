@@ -130,12 +130,12 @@ a {
 }
 
 .intro-image {
+  margin-bottom: 59px;
   padding: 76px 0;
 }
 
 .intro-content {
   margin-bottom: 51px;
-  padding: 59px 0 0 0;
 }
 
 .intro-header {
@@ -159,7 +159,7 @@ a {
 
 /*Секция Преимуществ*/
 .features {
-  margin-bottom: 39px;
+  margin-bottom: 69px;
 }
 
 .features ul {
@@ -188,6 +188,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 400px;
   padding: 45px 48px 60px;
 }
 
@@ -207,6 +208,7 @@ a {
 }
 
 .features-header + span {
+  display: block;
   margin-bottom: 20px;
 }
 
@@ -238,13 +240,9 @@ a {
 }
 
 .gray {
-  padding: 47px 57px 42px;
+  padding: 47px 60px 42px;
 
   background-color: #eeeeee;
-}
-
-.gray p {
-  padding: 20px 12px 30px;
 }
 
 /*Секция с предложением*/
@@ -796,6 +794,8 @@ a {
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
 
   cursor: pointer;
+
+  transition: all 0.2s ease;
 }
 
 .range-toggle::before {
@@ -884,23 +884,22 @@ a {
   font-size: 12px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
-  text-decoration: underline dotted #81b3d2;
-}
-
-.catalog-filter-sort.active {
-  color: #81b3d2;
   text-decoration: none;
+
+  border-bottom: 1px dotted #81b3d2;
 }
 
 .catalog-filter-sort:hover,
 .catalog-filter-sort:focus {
   color: #81b3d2;
-  text-decoration: underline dotted #81b3d2;
+  text-decoration: none;
 }
 
 .catalog-filter-sort:active {
   color: #000000;
   text-decoration: none;
+
+  border: none;
 }
 
 .catalog-filter-up {
