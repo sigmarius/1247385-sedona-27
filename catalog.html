@@ -3,9 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог отелей Седоны</title>
-    <!-- подключение шрифта с GoogleFonts
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    -->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
@@ -30,13 +27,7 @@
         <h1 class="visually-hidden">Каталог отелей Седоны</h1>
         <section class="catalog-filter">
         <h2 class="visually-hidden">Фильтр отелей</h2>
-        <!-- картинки переключателей для стилизации в CSS:
-          чекбокс выбран "img/checkbox-on.svg" width="27" height="23"
-          чекбокс не выбран "img/checkbox-off.svg" width="23" height="23"
-          ползунок на фильтре "img/filter-button.svg" width="20" height="22"
-          -->
           <form action="https://echo.htmlacademy.ru" method="get" class="catalog-search-form">
-            <!--method="get" чтобы была возможность отправить результаты фильтрации для просмотра-->
             <fieldset>
               <legend>Инфраструктура</legend>
               <ul>
@@ -80,7 +71,6 @@
                 <input id="max-price" type="number" name="max-price" min="0" max="3000" value="3000">
               </div>
               <div class="catalog-range-controls">
-                <!--обёртка, div для элементов - полоска <div class="bar"> по которой движутся круглые контролы <button> -->
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
@@ -90,7 +80,6 @@
                 <button class="btn-transparent" type="submit">Показать</button>
               </div>            
           </form>
-        <!-- раздел с результатами фильтрации -->
           <div class="catalog-filter-found">
             <div class="found-description">
               <span>Найдено:</span>
