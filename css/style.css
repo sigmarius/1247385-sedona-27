@@ -1,3 +1,21 @@
+@font-face { 
+  font-family: "PT Sans";
+  src: local("PT Sans"),
+       url("../fonts/ptsans.woff2") format("woff2"), 
+       url("../fonts/ptsans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face { 
+  font-family: "PT Sans";
+  src: local("PT Sans"),
+       url("../fonts/ptsansbold.woff2") format("woff2"), 
+       url("../fonts/ptsansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
 html {
   box-sizing: border-box; 
 }
@@ -870,7 +888,7 @@ a {
 .filter-found-text {
   padding: 0 40px 0 43px;
 
-  font-weight: normal;
+  font-weight: 400;
   font-size: 12px;  
   line-height: 18px;
   color: #000000;
