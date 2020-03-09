@@ -1,3 +1,4 @@
+(function () {
 var link = document.querySelector(".js-link");
 var form = document.querySelector(".js-form");
 
@@ -70,3 +71,4 @@ link.addEventListener("click", onLinkClick);
 form.addEventListener("submit", onSubmitClick);
 
 window.addEventListener("keydown", onEscapeClick);
+})();
