@@ -14,6 +14,8 @@
 
     var codeEscape = 27;
 
+    var isAnimate = true;
+
     try {
       adults = localStorage.getItem("adults");
       kids = localStorage.getItem("kids");
@@ -40,7 +42,21 @@
         // form.offsetWidth = form.offsetWidth; 
         // form.classList.add("modal-error");
         evt.preventDefault();
-        form.className = "search-form js-form modal-error";    
+        if (form.classList.contains("modal-error")) {
+          form.classList.remove("modal-error");
+          isAnimate === false;
+          console.log("Класс удален!");
+        } else {
+          isAnimate === true;
+          console.log("Флаг есть!");
+        }
+        if (isAnimate) {
+          form.classList.add("modal-error");
+          console.log("Класс добавлен потому что был флаг!");
+        } else {
+          form.classList.remove("modal-error");
+          console.log("Класс удален, потому что флага не было!");
+        }
       } else {
         if (isStorageSupport) {
           localStorage.setItem("adults", adultsAmount.value);
@@ -50,12 +66,10 @@
     };
 
     var isKeydownEsc = function (evt) {
-      if (evt.keyCode === codeEscape) {
-        evt.preventDefault();
-        if (!form.classList.contains("modal-hidden")) {
+      evt.preventDefault();
+      if (evt.keyCode === codeEscape && !form.classList.contains("modal-hidden")) {
           form.classList.add("modal-hidden");
           form.classList.remove("modal-error");
-        }
       }
     };
 
