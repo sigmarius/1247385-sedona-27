@@ -1091,7 +1091,7 @@ a {
 }
 
 /*Анимация Формы*/
-.modal {
+.modal-hidden {
   display: none;
 }
 

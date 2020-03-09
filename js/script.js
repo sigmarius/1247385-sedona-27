@@ -1,5 +1,5 @@
-var link = document.querySelector(".search-header");
-var form = document.querySelector(".search-form");
+var link = document.querySelector(".js-link");
+var form = document.querySelector(".js-form");
 
 var arrivalDate = form.querySelector("[name=arrival-date]");
 var livingDate = form.querySelector("[name=living-date]");
@@ -10,34 +10,24 @@ var isStorageSupport = true;
 var adults = "";
 var kids = "";
 
-try {
-  adults = localStorage.getItem("adults");
-  kids = localStorage.getItem("kids");
-} catch (err) {
-  isStorageSupport = false;
-}
+var codeEscape = 27;
 
-window.addEventListener("load", function (evt) {
+var onLinkClick = function (evt) {
   evt.preventDefault();
-  form.classList.add("modal");
-});
-
-link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  form.classList.toggle("modal");
+  form.classList.toggle("modal-hidden");
   form.classList.remove("modal-error");
   arrivalDate.focus();
   if (adults && kids) {
     adultsAmount.value = adults;
     kidsAmount.value = kids;
   }
-});
+};
 
-form.addEventListener("submit", function (evt) {
+var onSubmitClick = function (evt) {
   if (!arrivalDate.value || !livingDate.value) {
     evt.preventDefault();
     form.classList.remove("modal-error");
-    form.offsetWidth = form.offsetWidth;
+    form.offsetWidth = form.offsetWidth; 
     form.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
@@ -45,14 +35,38 @@ form.addEventListener("submit", function (evt) {
       localStorage.setItem("kids", kidsAmount.value);
     }
   }
-});
+};
 
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
+var onEscapeClick = function (evt) {
+  if (evt.keyCode === codeEscape) {
     evt.preventDefault();
-    if (!form.classList.contains("modal")) {
-      form.classList.add("modal");
+    if (!form.classList.contains("modal-hidden")) {
+      form.classList.add("modal-hidden");
       form.classList.remove("modal-error");
     }
   }
-});
+};
+
+var onDocumentReady = function (evt) {
+  evt.preventDefault();
+  form.classList.add("modal-hidden");
+};
+
+try {
+  adults = localStorage.getItem("adults");
+  kids = localStorage.getItem("kids");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", onDocumentReady);
+} else {
+  onDocumentReady;
+}
+
+link.addEventListener("click", onLinkClick);
+
+form.addEventListener("submit", onSubmitClick);
+
+window.addEventListener("keydown", onEscapeClick);
