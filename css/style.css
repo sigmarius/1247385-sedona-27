@@ -315,7 +315,6 @@ a {
   background-color: #ffffff;
 
   transform: translate(-50%, 0);
-  animation: bounce 1s;
 }
 
 .search-header {
@@ -1097,6 +1096,10 @@ a {
 
 .modal-error {
   animation: shake 1s;
+}
+
+.modal-animate {
+  animation: bounce 1s;
 }
 
 @keyframes bounce {

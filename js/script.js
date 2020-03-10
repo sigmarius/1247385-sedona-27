@@ -14,8 +14,6 @@
 
     var codeEscape = 27;
 
-    var isAnimate = true;
-
     try {
       adults = localStorage.getItem("adults");
       kids = localStorage.getItem("kids");
@@ -24,11 +22,11 @@
     }
 
     form.classList.add("modal-hidden");
-   
+
     var onLinkClick = function (evt) {
       evt.preventDefault();
       form.classList.toggle("modal-hidden");
-      form.classList.remove("modal-error");
+      form.classList.add("modal-animate");
       arrivalDate.focus();
       if (adults && kids) {
         adultsAmount.value = adults;
@@ -36,27 +34,17 @@
       }
     };
 
+    var removeAnimate = function () {
+      form.classList.remove("modal-error");
+    }
+
     var onSubmitClick = function (evt) {
       if (!arrivalDate.value || !livingDate.value) {
-        // form.classList.remove("modal-error");
-        // form.offsetWidth = form.offsetWidth; 
-        // form.classList.add("modal-error");
         evt.preventDefault();
-        if (form.classList.contains("modal-error")) {
-          form.classList.remove("modal-error");
-          isAnimate === false;
-          console.log("Класс удален!");
-        } else {
-          isAnimate === true;
-          console.log("Флаг есть!");
-        }
-        if (isAnimate) {
-          form.classList.add("modal-error");
-          console.log("Класс добавлен потому что был флаг!");
-        } else {
-          form.classList.remove("modal-error");
-          console.log("Класс удален, потому что флага не было!");
-        }
+        form.classList.remove("modal-animate");
+        form.classList.add("modal-error");
+        setTimeout(removeAnimate, 1000);
+        arrivalDate.focus();
       } else {
         if (isStorageSupport) {
           localStorage.setItem("adults", adultsAmount.value);
@@ -66,10 +54,12 @@
     };
 
     var isKeydownEsc = function (evt) {
-      evt.preventDefault();
-      if (evt.keyCode === codeEscape && !form.classList.contains("modal-hidden")) {
+      if (evt.keyCode === codeEscape) {
+        evt.preventDefault();
+        if (!form.classList.contains("modal-hidden")) {
           form.classList.add("modal-hidden");
           form.classList.remove("modal-error");
+        }
       }
     };
 
