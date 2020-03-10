@@ -12,7 +12,7 @@
     var adults = "";
     var kids = "";
 
-    var codeEscape = 27;
+    var keyCodeEsc = 27;
 
     try {
       adults = localStorage.getItem("adults");
@@ -54,10 +54,9 @@
     };
 
     var isKeydownEsc = function (evt) {
-      if (evt.keyCode === codeEscape && !form.classList.contains("modal-hidden")) {
+      if (evt.keyCode === keyCodeEsc && !form.classList.contains("modal-hidden")) {
           form.classList.add("modal-hidden");
           form.classList.remove("modal-error");
-          console.log("Что-то не то...");
         }
     };
 
@@ -65,6 +64,6 @@
 
     form.addEventListener("submit", onSubmitClick);
 
-    window.addEventListener("keydown", isKeydownEsc);
+    document.addEventListener("keydown", isKeydownEsc);
   });
 })();
