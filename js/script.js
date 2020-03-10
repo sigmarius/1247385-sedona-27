@@ -54,13 +54,11 @@
     };
 
     var isKeydownEsc = function (evt) {
-      if (evt.keyCode === codeEscape) {
-        evt.preventDefault();
-        if (!form.classList.contains("modal-hidden")) {
+      if (evt.keyCode === codeEscape && !form.classList.contains("modal-hidden")) {
           form.classList.add("modal-hidden");
           form.classList.remove("modal-error");
+          console.log("Что-то не то...");
         }
-      }
     };
 
     link.addEventListener("click", onLinkClick);
