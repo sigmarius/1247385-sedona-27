@@ -304,7 +304,7 @@ a {
 
 .search-form {
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   left: 50%;
 
   display: flex;
@@ -515,10 +515,21 @@ a {
 }
 
 .map {
+  position: relative;
+
   height: 473px;
 }
 
+.map iframe {
+  position: relative;
+  z-index: 2;
+}
+
 .map img {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
   display: block;
 }
 
@@ -526,6 +537,7 @@ a {
 .footer {
   position: relative;
   bottom: 0;
+  z-index: 3;
 
   display: flex;
   justify-content: space-between;
