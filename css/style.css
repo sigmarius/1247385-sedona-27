@@ -523,6 +523,8 @@ a {
 .map iframe {
   position: relative;
   z-index: 2;
+
+  border: none;
 }
 
 .map img {
