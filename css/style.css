@@ -1,29 +1,31 @@
-@font-face { 
+@font-face {
   font-family: "PT Sans";
   src: local("PT Sans"),
-       url("../fonts/ptsans.woff2") format("woff2"), 
-       url("../fonts/ptsans.woff") format("woff");
+    url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face { 
+@font-face {
   font-family: "PT Sans";
   src: local("PT Sans"),
-       url("../fonts/ptsansbold.woff2") format("woff2"), 
-       url("../fonts/ptsansbold.woff") format("woff");
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 html {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
-*, *::before, *::after { 
-  box-sizing: inherit; 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -40,13 +42,13 @@ body {
   background-color: #f2f2f2;
 }
 
-img { 
-  max-width: 100%; 
+img {
+  max-width: 100%;
   height: auto;
 }
 
-a { 
-  text-decoration: none; 
+a {
+  text-decoration: none;
 }
 
 .visually-hidden {
@@ -75,7 +77,7 @@ a {
 
 .logo-image {
   position: absolute;
-  left:529px;
+  left: 529px;
   right: 531px;
 }
 
@@ -138,15 +140,15 @@ a {
   width: 1200px;
 
   text-align: center;
-  background-color:  #222f38;
+  background-color: #222f38;
   background-image: url("../img/intro-mask.svg"),
-                    url("../img/background-photo.jpg");
-  background-repeat: no-repeat, 
-                     no-repeat;
+    url("../img/background-photo.jpg");
+  background-repeat: no-repeat,
+    no-repeat;
   background-size: 1203px 59px,
-                   cover;
+    cover;
   background-position: center 100.3%,
-                       center bottom;
+    center bottom;
 }
 
 .intro-image {
@@ -159,7 +161,7 @@ a {
 }
 
 .intro-header {
-  width: 440px;
+  width: 450px;
   margin: 0 auto 29px;
 
   font-weight: bold;
@@ -197,7 +199,7 @@ a {
   text-align: center;
   color: #ffffff;
 
-  background-color: #81b3d2; 
+  background-color: #81b3d2;
 }
 
 .features-blue .features-header {
@@ -223,17 +225,17 @@ a {
   padding: 0 65px;
 
   font-weight: bold;
-  font-size: 21px;  
+  font-size: 21px;
   color: #000000;
 }
 
-.features-header + span {
+.features-header+span {
   display: block;
   margin-bottom: 20px;
 }
 
 .features-item {
-  width: calc(100%/3); 
+  width: calc(100%/3);
   padding: 160px 55px 83px;
 
   text-align: center;
@@ -245,17 +247,17 @@ a {
 }
 
 .features-item.house {
-  background: url('../img/home-icon.svg') no-repeat;
+  background: url("../img/home-icon.svg") no-repeat;
   background-position: center 60px;
 }
 
 .features-item.food {
-  background: url('../img/food-icon.svg') no-repeat;
+  background: url("../img/food-icon.svg") no-repeat;
   background-position: center 60px;
 }
 
 .features-item.box {
-  background: url('../img/box-icon.svg') no-repeat;
+  background: url("../img/box-icon.svg") no-repeat;
   background-position: center 55px;
 }
 
@@ -278,7 +280,7 @@ a {
 
 .promo-header {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   padding: 0;
 
   font-size: 30px;
@@ -297,9 +299,9 @@ a {
 /*Форма поиска отелей на Главной*/
 .search {
   position: relative;
-  
+
   font-weight: bold;
-  font-size: 14px;  
+  font-size: 14px;
 }
 
 .search-form {
@@ -324,8 +326,9 @@ a {
   display: block;
   width: 568px;
   margin: 0 auto;
-  padding: 30px 0 31px;
+  padding: 30px 0 32px;
 
+  font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
@@ -334,6 +337,8 @@ a {
 
   background-color: #766357;
   border: none;
+
+  cursor: pointer;
 }
 
 .search-header:hover,
@@ -346,7 +351,7 @@ a {
 .search-header:active {
   color: rgba(255, 255, 255, 0.3);
 
-  background-color: #503e33;  
+  background-color: #503e33;
 }
 
 .form-block {
@@ -386,7 +391,7 @@ a {
 
   border: none;
   background: none;
-  
+
   cursor: pointer;
 }
 
@@ -397,11 +402,11 @@ a {
 .button-calendar:hover .icon-calendar,
 .button-calendar:focus .icon-calendar {
   fill: #000000;
-} 
+}
 
 .button-calendar:active .icon-calendar {
   fill: #81b3d2;
-} 
+}
 
 .search-input {
   font: inherit;
@@ -410,7 +415,7 @@ a {
   color: #000000;
 
   background-color: #f2f2f2;
-  border: none;  
+  border: none;
 }
 
 .search-input::-moz-placeholder {
@@ -431,9 +436,8 @@ a {
 
 .search-input:focus,
 .search-input:active {
-  outline: none;
+  outline: 2px solid #e5e5e5;
   background-color: #ffffff;
-  border: 2px solid #e5e5e5;
 }
 
 .half-width {
@@ -445,9 +449,9 @@ a {
   width: 38px;
   height: 38px;
 
-  font-size: 24px;
   font-weight: bold;
-  color: #cacaca;  
+  font-size: 24px;
+  color: #cacaca;
   border: none;
 
   cursor: pointer;
@@ -497,7 +501,7 @@ a {
   text-transform: uppercase;
   color: #ffffff;
 
-  background-color: #81b3d2;  
+  background-color: #81b3d2;
   border: none;
 
   cursor: pointer;
@@ -550,13 +554,13 @@ a {
 }
 
 .footer-block {
-  width: calc(100%/3); 
+  width: calc(100%/3);
 }
 
 .contact {
   padding: 0;
 
-  font-weight: bold;  
+  font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   color: #000000;
@@ -599,7 +603,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 48px;
-  height: 48px; 
+  height: 48px;
 
   background-color: #81b3d2;
 
@@ -666,7 +670,7 @@ a {
   min-height: 297px;
 
   background-color: #416c8f;
-  background-image: url('../img/filter-background.jpg');
+  background-image: url("../img/filter-background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -714,7 +718,7 @@ a {
   user-select: none;
 }
 
-.filter-input-checkbox + .filter-option-label::before {
+.filter-input-checkbox+.filter-option-label::before {
   position: absolute;
   left: -39px;
   top: -2px;
@@ -725,7 +729,7 @@ a {
   content: url("../img/checkbox-off.svg");
 }
 
-.filter-input-checkbox:checked + .filter-option-label::before {
+.filter-input-checkbox:checked+.filter-option-label::before {
   content: url("../img/checkbox-on.svg");
 }
 
@@ -747,7 +751,7 @@ a {
 
   height: 36px;
   margin-bottom: 20px;
-  
+
   font-size: 0;
 
   border: 2px solid #ffffff;
@@ -826,7 +830,7 @@ a {
 .range-toggle {
   position: absolute;
   top: -9px;
-  
+
   width: 21px;
   height: 21px;
 
@@ -897,7 +901,7 @@ a {
 
   font-weight: bold;
   font-size: 21px;
-  line-height: 26px; 
+  line-height: 26px;
 
   border-bottom: 1px solid #e5e5e5;
   background-color: #ffffff;
@@ -907,7 +911,7 @@ a {
   padding: 0 40px 0 43px;
 
   font-weight: 400;
-  font-size: 12px;  
+  font-size: 12px;
   line-height: 18px;
   color: #000000;
 }
@@ -977,7 +981,7 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   padding: 30px 72px 24px;
-  
+
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -998,7 +1002,7 @@ a {
 
   font-weight: bold;
   font-size: 21px;
-  line-height: 18px;  
+  line-height: 18px;
   color: #000000;
 }
 
@@ -1021,6 +1025,8 @@ a {
 .catalog-item-text span {
   display: inline-block;
   width: 43%;
+
+  vertical-align: top;
 }
 
 .catalog-controls a {
@@ -1028,6 +1034,7 @@ a {
   padding: 3px 16px;
 
   font-weight: bold;
+  vertical-align: top;
   color: #ffffff;
 
   cursor: pointer;
@@ -1049,7 +1056,7 @@ a {
 .button-info:active {
   color: rgba(255, 255, 255, 0.3);
 
-  background-color: #5496bd;  
+  background-color: #5496bd;
 }
 
 .button-book {
@@ -1095,7 +1102,7 @@ a {
 }
 
 .rating-value {
-  padding: 3px 13px 8px 16px; 
+  padding: 3px 13px 8px 16px;
 
   color: #666666;
   background-color: #f2f2f2;
@@ -1133,6 +1140,7 @@ a {
 }
 
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(-50%);
