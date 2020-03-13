@@ -594,18 +594,16 @@ a {
   list-style: none;
 }
 
-.social-item { 
-  background-color: #81b3d2;
-
-  cursor: pointer;
-}
-
-.social-item a {
+.social-item {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 48px;
   height: 48px; 
+
+  background-color: #81b3d2;
+
+  cursor: pointer;
 }
 
 .social-icon {
@@ -649,12 +647,12 @@ a {
   margin-left: 8px;
 }
 
-.copyright-icon:hover,
-.copyright-icon:focus {
+.copyright a:hover .copyright-icon,
+.copyright a:focus .copyright-icon {
   fill: #81b3d2;
 }
 
-.copyright-icon:active {
+.copyright a:active .copyright-icon {
   fill: #bdbbbc;
 }
 
